@@ -7,7 +7,7 @@
 
 
 class FirstClass:
-    def setdata(self, value):
+    def setdata(self, value:str):
         self.data = value
 
     def display(self):
