@@ -2,16 +2,13 @@
 """
 
 class Person:
-    def __init__(self, name, jobs, age=None):
+    def __init__(self, name, job=None, pay=0):
         self.name = name
-        self.jobs = jobs
-        self.age = age
-    
-    def info(self):
-        return self.name, self.jobs,
+        self.job = job
+        self.pay = pay
 
-rec1 = Person('Bob', ['dev', 'mgr'], 40.5)
+bob = Person('Bob Smit')
+sue = Person('Sue Jones', job = 'dev', pay = 100000)
 
-rec = Person('Sue', ['dev', 'cto'])
-print(rec1.jobs, rec.info())
-
+print(bob.name, bob.pay)
+print(sue.name, sue.pay)
