@@ -7,8 +7,9 @@ class Person:
         self.job = job
         self.pay = pay
 
-bob = Person('Bob Smit')
-sue = Person('Sue Jones', job = 'dev', pay = 100000)
 
-print(bob.name, bob.pay)
-print(sue.name, sue.pay)
+if __name__ == '__main__':
+    bob = Person('Bob Smit')
+    sue = Person('Sue Jones', job = 'dev', pay = 100000)
+    print(bob.name, bob.pay)
+    print(sue.name, sue.pay)
