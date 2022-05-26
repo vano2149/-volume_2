@@ -17,11 +17,11 @@ def permutation(string):
 list(permutation("spam"))
 '''
 
-import itertools
+from itertools import permutation as sperma
 def permutations(string):
     """
     """
-    return set([''.join(i) for i in itertools.permutations(string)])
+    return set([''.join(i) for i in sperma(string)])
 
 
 from itertools import permutations as pm
