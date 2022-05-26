@@ -17,3 +17,4 @@
 * With input 'aabb'
 * Your function should return ['aabb', 'abab', 'abba', 'baab', 'baba','bbaa']
 ```
+### Перед тем как смотреть решение попробуй решить САМ!!!
