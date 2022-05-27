@@ -1,8 +1,10 @@
 """
 Страница 82
 """
+from classtools import AttrDisplay
 
-class Person:
+
+class Person(AttrDisplay):
     """
     """
     def __init__(self, name, job=None, pay=0):
@@ -16,25 +18,35 @@ class Person:
     def giveRaise(self, percent):
         self.pay = int(self.pay * (1 + percent))
 
-    def __repr__(self):
-        return f"<Person:{self.name}, {self.pay}>"
-
-
 class Manager(Person):
     """
+    Настроенная версия Person со специальным требованием.
     """
     def __init__(self,name, pay):
-        self.person = Person(name, 'mgr', pay)
+        Person.__init__(self, name, 'mgr', pay)
     
     def giveRaise(self, percent, bonus=.10):
-        self.person.giveRaise(percent + bonus)
+        Person.giveRaise(self, percent + bonus)
 
-    def __getattr__(self, attr):
-        return getattr(self.person, attr)
+if __name__ == '__main__':
+    print('-' * 38)
+    bob = Person('Bob Smith')
+    sue = Person('Sue Jones', job='dev', pay=100000)
+    print(bob)
+    print(sue)
+    print('-' * 38)
+    print(bob.lastName(), sue.lastName())
+    sue.giveRaise(.10)
+    print(sue)
+    print('-' * 38)
+    tom = Manager('Tom Smith', 50000)
+    tom.giveRaise(.10)
+    print(tom.lastName())
+    print(tom)
+    print('-' * 38)
 
-    def __repr__(self):
-        return str(self.person)
 
+'''
 class Departament:
     def __init__(self, *args):
         
@@ -50,18 +62,4 @@ class Departament:
     def showAll(self):
         for person in self.members:
             print(person)
-
-
-if __name__ == '__main__':
-    print('-' * 26)
-    bob = Person('Bob Smith')
-    sue = Person('Sue Jones', job='dev', pay=100000)
-    tom = Manager('Tom Smith', 50000)
-    
-
-    development = Departament(bob, sue)
-    development.addMember(tom)
-    development.giveRaise(.10)
-    development.showAll()
-    print('-' * 26)
-
+'''
