@@ -2,7 +2,7 @@
 Squares_yield.py file! Page 141!
 """
 
-class Sqares:
+class Squares:
     def __init__(self, start, stop):
         self.start = start
         self.stop = stop
