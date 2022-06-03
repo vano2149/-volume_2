@@ -59,7 +59,7 @@ class Commuter5:
         if isinstance(other, Commuter5):
             other= other.val
         return Commuter5(self.val + other)
-    
+
     def __radd__(self, other):
 
         return Commuter5(other + self.val)
@@ -68,7 +68,12 @@ class Commuter5:
         return f'<Commuter5: {self.val}>'
 
 if __name__ == '__main__':
-    for klass in (Commuter1,Commuter2,Commuter3,Commuter4,Commuter5):
+    for klass in (
+            Commuter1,
+            Commuter2,
+            Commuter3,
+            Commuter4,
+            Commuter5):
         print('-' * 60)
         x = klass(88)
         y = klass(99)
