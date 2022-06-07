@@ -22,4 +22,3 @@ class Prossesor:
         """
         """
         assert False, "converter must be defined"
-
