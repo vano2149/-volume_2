@@ -1,4 +1,5 @@
 """
+Страница 221! Модель классов нового стиля!
 """
 
 class Set(list):
@@ -23,7 +24,7 @@ class Set(list):
         for x in value:
             if not x in self:
                 self.append(x)
-    
+
     def __add__(self,other):
         return self.intersect(other)
 
