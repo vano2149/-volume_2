@@ -1,5 +1,5 @@
 """
-Mapattrs_slots.py file
+Mapattrs_slots.py file Pge 252!
 """
 from mapattrs import mapattrs, trace
 
