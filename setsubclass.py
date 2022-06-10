@@ -1,5 +1,5 @@
 """
-Страница 221! Модель классов нового стиля!
+Страница 241! Модель классов нового стиля!
 """
 
 class Set(list):
@@ -16,10 +16,12 @@ class Set(list):
             if x in other:
                 res.append(x)
         return Set(res)
+
     def union(self, other):
         res = Set(self)
         res.concat(other)
         return res
+
     def concat(self, value):
         for x in value:
             if not x in self:
