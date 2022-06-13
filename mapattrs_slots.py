@@ -1,5 +1,5 @@
 """
-Mapattrs_slots.py file Page 253!
+Mapattrs_slots.py file Page 257!
 """
 from mapattrs import mapattrs, trace
 
