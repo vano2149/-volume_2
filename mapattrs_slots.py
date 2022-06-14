@@ -18,3 +18,4 @@ class D(B, C):
 
 I = D()
 trace(mapattrs(I, bysource = True))
+
