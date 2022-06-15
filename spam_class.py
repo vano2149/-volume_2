@@ -1,5 +1,6 @@
 """
-spam_class.py file!!
+spam_class.py file Page 272!!
+Декораторы и метаклассы
 """
 '''
 class Spam:
@@ -14,6 +15,7 @@ class Spam:
     printNumInstances = staticmethod(printNumInstances)
 '''
 
+'''
 class Spam:
     numInstances = 0
     def __init__(self):
@@ -32,3 +34,24 @@ class Sub(Spam):
 
 class Other(Spam):
     pass
+'''
+
+class Spam:
+    numInstances = 0
+
+    def count(cls):
+        cls.numInstances += 1
+    
+    def __init__(self):
+        self.count()
+    count = classmethod(count)
+
+class Sub(Spam):
+    numInstances = 0
+
+    def __init__(self):
+        Spam.__init__(self)
+
+class Other(Spam):
+    numInstances = 0
+
