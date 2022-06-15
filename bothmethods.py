@@ -12,6 +12,3 @@ class Methods:
     def cmeth(cls, x):
         print([cls, x])
 
-@staticmethod(smeth)
-
-@classmethod(cmeth)
