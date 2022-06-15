@@ -12,6 +12,6 @@ class Methods:
     def cmeth(cls, x):
         print([cls, x])
 
-smeth = staticmethod(smeth)
+@staticmethod(smeth)
 
-cmeth = classmethod(cmeth)
+@classmethod(cmeth)
