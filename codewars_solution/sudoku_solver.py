@@ -327,6 +327,6 @@ def sudoku(puzzle):
                             return puzzle
                         puzzle[i][j] = 0
                 return False
-                    
-                    
+
+
     return puzzle
