@@ -1,4 +1,5 @@
 """
+Page -> 299!
 """
 
 class Employee:
@@ -24,7 +25,9 @@ class Server2(Employee):
         super().__init__(name, 40000)
 
 class TwoJobs(Chef1, Server1):
-    pass
+    def __init__(self, name):
+        Employee.__init__(self, name, 70000)
+
 
 if __name__ == '__main__':
     bob = Chef1('Bob')
