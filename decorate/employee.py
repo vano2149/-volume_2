@@ -39,4 +39,5 @@ if __name__ == '__main__':
     print(bob.salary, sue.salary)
     print('Ниже ошибка!')
     tom = TwoJobs('Tom')
+    print(tom.salary)
 
