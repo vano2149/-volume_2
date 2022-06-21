@@ -1,7 +1,7 @@
 """
 try_except_else.py file
 Page -> Унифицированный синтаксис 
-оператора try.
+оператора try.e
 """
 def gobad(x,y):
     return x / y
