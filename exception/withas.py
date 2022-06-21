@@ -1,7 +1,7 @@
 """
 File withas.py
 """
-
+'''
 class TraceBlock:
     def message(self, arg):
         print('running' + arg)
@@ -24,3 +24,9 @@ if __name__ == '__main__':
         action.message('test 2')
         raise TypeError
         print('not reached')
+'''
+
+with open('data') as fin, open('res', 'w') as fout:
+    for line in fin:
+        if 'some key' in line:
+            fout.write(line)
