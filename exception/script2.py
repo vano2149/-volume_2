@@ -1,5 +1,7 @@
 """
 File script2.py!
+Глава 35. Объкты исключений!
+Page -> 358!
 """
 
 import sys
