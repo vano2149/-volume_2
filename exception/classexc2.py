@@ -1,6 +1,7 @@
 """
 File classexc2.py!
-Page -> 365!
+Встроенные классы исключений!
+Page -> 366
 """
 
 class General(Exception):
