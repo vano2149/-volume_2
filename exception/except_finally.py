@@ -1,5 +1,9 @@
 """
+except_finally.py file!
+page -> 380.
+Идиомы исключений!
 """
+
 def raise1():
     raise IndexError
 
