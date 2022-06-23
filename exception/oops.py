@@ -1,6 +1,6 @@
 """
 file oops.py
-Page -> 401!
+Page -> 406!
 Unicode and bytes list!
 """
 
