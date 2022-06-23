@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\vano2\OneDrive\Рабочий стол\-volume_2\exception\badly.py", line 11, in <module>
+    inverse(0)
+  File "C:\Users\vano2\OneDrive\Рабочий стол\-volume_2\exception\badly.py", line 8, in inverse
+    return 1 / x
+ZeroDivisionError: division by zero
