@@ -2,6 +2,7 @@
 file oops.py
 Page -> 406!
 Unicode and bytes list!
+Time code 1:39:05
 """
 
 class Oops(Exception):
