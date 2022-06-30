@@ -23,7 +23,7 @@ def solution(string,markers):
 def solution(string,markers):
     """
     Данное решение с ответов на codewars.com
-    и оно не работает!!!!
+    и оно не РАБОТАЕТ!!!!
     """
     parts = string.split('\n')
     for s in markers:
