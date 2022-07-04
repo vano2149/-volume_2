@@ -9,12 +9,11 @@ class Person:
     def __init__(self, name):
         self._name = name
 
-    def __getattr__(self, attr):
+    def __getattribute__(self, attr):
         print(f'Get: ' + attr)
         if attr == 'name':
-            return self._name
-        else:
-            raise AttributeError(attr)
+            attr = '_name'
+        return object.__getattribute__(self, attr)
 
     def __setattr__(self, attr, value):
         print(f"Set: " + attr)
