@@ -1,5 +1,6 @@
 """
 getattr_delegate.py file!
+Page -> 493!
 """
 
 class Person:
@@ -25,8 +26,12 @@ class Manager:
     def giveRaise(self, percent, bonus = .10):
         self.person.giveRaise(percent + bonus)
 
-    def __getattr__(self, attr):
-        return getattr(self.person, attr)
+    def __getattribute__(self, attr):
+        print('**' , attr)
+        if attr in ['person', 'giveRaise']:
+            return object.__getattribute__(self, attr)
+        else:
+            return getattr(self.person, attr)
 
     def __repr__(self):
         return str(self.person)
