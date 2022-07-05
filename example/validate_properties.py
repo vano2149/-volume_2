@@ -16,7 +16,7 @@ class CardHolder:
         return self.__name
     
     def setName(self, value):
-        value = value.lower().replase(' ', '_')
+        value = value.lower().replace(' ', '_')
         self.__name = value
     name = property(getName, setName)
 
@@ -34,7 +34,7 @@ class CardHolder:
         return self.__acct[:-3] + '***'
 
     def setAcct(self, value):
-        value = value.replase('-', '')
+        value = value.replace('-', '')
         if len(value) != self.acctlen:
             raise TypeError('invalid acct number!')
         else:
