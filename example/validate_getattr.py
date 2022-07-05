@@ -1,6 +1,6 @@
 """
 validate_getattr.py file!
-Page -> 501!
+Page -> 505!
 """
 
 class CardHolder:
