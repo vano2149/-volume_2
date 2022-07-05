@@ -36,7 +36,7 @@ class Powers:
         self._square = square
         self._cube = cube
 '''
-
+'''
 class Powers:
     
     def __init__(self, square, cube):
@@ -55,7 +55,27 @@ class Powers:
         if name == 'square':
             self.__dict__['_square'] = value
         else:self.__dict__[name] = value
+'''
 
+class Powers:
+
+    def __init__(self, square, cube):
+        self._square = square
+        self._cube = cube
+
+    def __getattribute__(self, name):
+        if name == 'square':
+            return object.__getattribute__(self, '_square') ** 2
+        elif name == 'cube':
+            return object.__getattribute__(self, '_cube') ** 3
+        else:
+            return object.__getattribute__(self, name)
+
+    def __setattr__(self, name, value):
+        if name == 'square':
+            object.__setattr__(self, '_square', value)
+        else:
+            object.__setattr__(self, name, value)
 
 if __name__ == "__main__":
     X = Powers(3, 4)
