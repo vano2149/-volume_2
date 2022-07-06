@@ -4,6 +4,7 @@ decorator.py file!
 
 """
 class Tracer:
+    '''версия 1'''
     def __init__(self, func):
         self.calls = 0
         self.func = func
@@ -20,6 +21,9 @@ def spam(a, b, c):
 spam(1, 2, 3)
 """
 class Tracer:
+    """
+    Версия 2!
+    """
     def __init__(self, func):
         self.calls = 0
         self.func = func
