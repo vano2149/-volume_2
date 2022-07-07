@@ -41,6 +41,19 @@ def spam(a, b, c):
 def eggs(x, y):
     print(x ** y)
 
+class Person:
+    def __init__(self, name, pay):
+        self.name = name
+        self.pay = pay
+    
+@Tracer
+def giveRaise(self, percent):
+    self.pay *= (1.0 * percent)
+
+@Tracer
+def lastName(self):
+    return self.name.split()[-1]
+
 if __name__ == '__main__':
     spam(1, 2, 3)
     spam(a=4, b=5, c=6)
