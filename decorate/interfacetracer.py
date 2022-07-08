@@ -29,20 +29,20 @@ if __name__ == '__main__':
         def pay(self):
             return self.hours * self.rate
 
-food = Spam()
-food.display()
-print([food.fetches])
+if __name__ == '__main__':
+    food = Spam()
+    food.display()
+    print([food.fetches])
 
-bob = Person('Bob Smith', 40, 50)
-print(bob.name)
-print(bob.pay())
+    bob = Person('Bob Smith', 40, 50)
+    print(bob.name)
+    print(bob.pay())
 
-print('')
-sue = Person('Sue Jones', rate=100, hours=60)
-print(sue.name)
-print(sue.pay())
+    print('')
+    sue = Person('Sue Jones', rate=100, hours=60)
+    print(sue.name)
+    print(sue.pay())
 
-print(bob.name)
-print(bob.pay())
-print([bob.fetches, sue.fetches])
-
+    print(bob.name)
+    print(bob.pay())
+    print([bob.fetches, sue.fetches])
