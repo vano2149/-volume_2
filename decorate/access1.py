@@ -39,14 +39,14 @@ if __name__ == '__main__':
         def __init__(self, label, start):
             self.label = label
             self.data = start
-        
+
         def size(self):
             return len(self.data)
         
         def double(self):
             for i in range(self.size()):
                 self.data[i] = self.data[i] * 2
-        
+
         def display(self):
             print(f'{self.label} => {self.data}')
 
