@@ -1,5 +1,6 @@
 """
 access2.py file!
+Page -> 559!
 """
 
 traceMe = False
@@ -8,7 +9,7 @@ def trace(*args):
     if traceMe:
         print('[' + ' '.join(map(str, args)) + ']')
 
-def accessControl(failIf):
+def accessControl(failIf:str) -> None:
     def onDecorator(aClass):
         class onInstance:
             def __init__(self, *args, **kwargs):
@@ -46,8 +47,6 @@ if __name__ == '__main__':
         def __init__(self, name, age):
             self.name = name
             self.age = age
-    
+
     X = Person('bob smith', 40)
     print(f"Hi my name is {X.name.title()}!")
-
-
