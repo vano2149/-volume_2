@@ -2,7 +2,6 @@
 access3.py file!
 """
 
-from decorate.access2 import trace
 
 traceMe = False
 def trace(*args):
@@ -38,7 +37,7 @@ def accessControl(failIf):
                 trace('Set: ', attr, value)
                 if attr =='_onInstance__wrapped':
                     self.__dict__[attr] = value
-                elif failIf:
+                elif failIf(attr):
                     raise TypeError(f'Private attribute change: {attr}')
                 else:
                     setattr(self.__wrapped, attr, value)
