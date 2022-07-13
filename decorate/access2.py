@@ -12,6 +12,9 @@ def trace(*args):
 def accessControl(failIf:str) -> None:
     def onDecorator(aClass):
         class onInstance:
+            """
+            Doc String!
+            """
             def __init__(self, *args, **kwargs):
                 self.__wrapped = aClass(*args, **kwargs)
             
@@ -44,6 +47,9 @@ def Public(*attributes):
 if __name__ == '__main__':
     @Private('age')
     class Person:
+        """
+        Doc String a Person class!
+        """
         def __init__(self, name, age):
             self.name = name
             self.age = age
