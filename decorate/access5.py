@@ -20,9 +20,9 @@ def accessControl(failIf):
             if failIf(attr):
                 raise TypeError(f'Private attribute change {attr}')
             else:
-                return object.__setattribute__(self, attr, value)
+                return object.__setattr__(self, attr, value)
         aClass.__getattribute__ = getattributes
-        aClass.__setattribute__ = setattributes
+        aClass.__setattr__ = setattributes
         return aClass
     return onDecorator
 
