@@ -13,8 +13,11 @@ class Person:
     
     def lastName(self):
         return self.name.split()[-1]
-    
+'''
     def giveRaise(self, percent:int)-> int:
+        """
+        Проверка через if
+        """
         if percent < 0.0 or percent > 1.0:
             raise TypeError("Invalid percentage")
         self.pay = int(self.pay * (1 + percent))
@@ -24,6 +27,10 @@ class Person:
         """
         assert percent >= 0.0 and percent <= 1.0, "Invalid percent"
         self.pay = int(self.pay *(1 + percent))
+'''
+    @rangetest(percent=(0.0, 1.0))
+    def giveRaise(self, percent):
+        self.pay = int(self.pay * (1 + percent))
 
 class Manager(Person):
     """
