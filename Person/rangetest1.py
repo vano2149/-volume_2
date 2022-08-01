@@ -13,7 +13,7 @@ def rangetest(*argchecks):
                 for (ix, low, high) in argchecks:
                     if args[ix] < low or args[ix] > high:
                         errmsg = f'Argument {ix} not in {low}..{high}'
-                    raise TypeError(errmsg)
+                        raise TypeError(errmsg)
                 return func(*args)
             return onCall
     return onDecorator
