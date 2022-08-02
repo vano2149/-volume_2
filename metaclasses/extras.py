@@ -35,3 +35,23 @@ Client3 = extras(Client3)
 
 X = Client1()
 X.extra()
+
+
+def extra(self, arg): ...
+
+def extras(Class):
+    if required():
+        Class.extra = extra
+    return Class
+
+@extra
+class Client1: ...
+
+@extra
+class Client2: ...
+
+@extra
+class Client3: ...
+
+X = Client1()
+X.extra()
