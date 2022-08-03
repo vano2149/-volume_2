@@ -1,5 +1,6 @@
 """
 spam1.py file!
+Конец! / End!
 """
 # Page -> 604!
 class MetaOne(type):
