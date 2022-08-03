@@ -1,6 +1,7 @@
 """
 metaclassthree.py file!
 """
+
 def MetaFunc(classname, supers, classdict):
     print('In MetaFunc: ', classname, supers, classdict)
     return type(classname, supers, classdict)
