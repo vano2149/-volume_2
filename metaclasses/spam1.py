@@ -2,9 +2,20 @@
 spam1.py file!
 """
 # Page -> 604!
-class Eggs: ...
+class MetaOne(type):
+    def __new__(meta, classname, supers, classdict):
+        print('In MetaOne.new:', meta, classname, supers, classdict)
+        return type.__new__(meta, classname, supers, classdict)
 
-class Spam(Eggs, metaclass=Meta):
+class Eggs:
+    pass
+
+print('making class')
+class Spam(Eggs, metaclass=MetaOne):
     data = 1
     def meth(self, arg):
         return self.data + arg
+
+print('meking instance')
+X = Spam()
+print('data:', X.data, X.meth(2))
